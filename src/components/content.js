@@ -1,10 +1,11 @@
 import React from 'react';
-import "./App.css";
+import "../App.css";
 
  const Content = props =>{
      return (
-     <div>{props.explanation}</div>
+     <div>{props.content}</div>
+     
      )
  }
-
+ console.log();
  export default Content;

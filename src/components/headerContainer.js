@@ -1,14 +1,17 @@
 import React from 'react';
-import "./App.css";
-import Header from './header';
-import Content from './content';
+import "../App.css";
+
+import ImageKey from './image';
 
 
 const HeaderContainer = props =>{
     return (
         <div className = 'header-container'> 
-            <Header/>
-            <Content/>
+           
+            <ImageKey/>
+          
         </div>
     )
 }
+
+export default HeaderContainer;
