@@ -3,7 +3,26 @@ import axios from 'axios';
 import Header from './header';
 import Content from './content';
 import "../App.css";
+import styled from "styled-components";
 
+const SpacePhoto = styled.img`
+    width:425px;
+    height:auto;
+    border-radius : 2%;
+    margin-top: 3%
+    
+`;
+const Card = styled.div`
+    width:500px;
+    height:auto;
+    background: #FBEAEB;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding: 0% 5% 2% 5%;
+    border-radius:1%
+`;
 
 function ImageKey(){
   const [photo, setPhoto] = useState([]);
@@ -20,11 +39,12 @@ function ImageKey(){
     })
   }, [])
   return (
-      <div>
+    
+      <Card>
         <Header name={photo.copyright}/>
-      <img className='main-image' alt='space-photo' src={photo.url}/>
+      <SpacePhoto alt='space-photo' src={photo.url}/>
       <Content content={photo.explanation}/>
-      </div>
+      </Card>
   )
 }
 
